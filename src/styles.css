@@ -2,6 +2,10 @@
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
 }
 
 body {
@@ -11,6 +15,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 20px;
 }
 
 .carousel {
@@ -41,6 +46,27 @@ body {
     right: 0px;
 }
 
-.carousel>div {
+.images>div {
     display: none;
+}
+
+div.active {
+    display: block;
+}
+
+.navigator {
+    display: flex;
+    gap: 10px;
+}
+
+.navigator>span {
+    background-color: white;
+    width: 15px;
+    height: 15px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.navigator>span.active {
+    background-color: gray;
 }
